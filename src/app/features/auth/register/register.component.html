@@ -1,0 +1,31 @@
+<app-container>
+  <div class="logo-container">
+    <app-logo [height]=100 [width]=100 />
+  </div>
+  <div class="h3">Welcome to Sirius Twitter</div>
+  <div class="h5">Create your account</div>
+  <form [formGroup]="registerForm" (submit)="submitRegister()">
+    <div>
+      <input id="username" type="text" formControlName="username" placeholder="Username" autocomplete="off"
+             [class.error]="registerForm.get('username')?.hasError('customError') || registerForm.hasError('customError')">
+      <span
+        *ngIf="registerForm.get('username')?.hasError('customError')">{{registerForm.get('username')?.getError('customError')}}</span>
+    </div>
+    <div>
+      <input id="email" type="email" formControlName="email" placeholder="Email" autocomplete="off"
+             [class.error]="registerForm.get('email')?.hasError('customError') || registerForm.hasError('customError')">
+      <span
+        *ngIf="registerForm.get('email')?.hasError('customError')">{{registerForm.get('email')?.getError('customError')}}</span>
+    </div>
+    <div>
+      <input id="password" type="password" formControlName="password" placeholder="Password"
+             [class.error]="registerForm.get('password')?.hasError('customError') || registerForm.hasError('customError')">
+      <span
+        *ngIf="registerForm.get('password')?.hasError('customError')">{{registerForm.get('password')?.getError('customError')}}</span>
+    </div>
+    <span
+      *ngIf="registerForm.hasError('customError')">{{registerForm.getError('customError')}}</span>
+    <button type="submit" class="primary" [disabled]="loading">Register</button>
+    <button type="button" class="secondary" routerLink="/login">Sign In</button>
+  </form>
+</app-container>

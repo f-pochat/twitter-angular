@@ -1,0 +1,25 @@
+.logo-container {
+  padding-top: 16px;
+}
+
+form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+
+  & .primary {
+    margin-top: 32px;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  & span {
+    color: var(--state-error);
+  }
+}
