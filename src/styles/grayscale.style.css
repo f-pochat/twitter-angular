@@ -1,0 +1,11 @@
+/* Color Styles  */
+:root {
+  --grayscale-white: #FFFFFFFF;
+  --grayscale-inactivebg: #F0F3F4FF;
+  --grayscale-container-line: #2F3336;
+  --grayscale-hover: #D1D9DDFF;
+  --grayscale-dark-hover: #272728FF;
+  --grayscale-outline: #D1D9DDFF;
+  --grayscale-text2: #566370FF;
+  --grayscale-black: #000000FF;
+}

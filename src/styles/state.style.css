@@ -1,0 +1,5 @@
+/* Color Styles  */
+:root {
+  --state-error: #FF474CFF;
+  --state-failed: #E5397FFF;
+}

@@ -1,0 +1,14 @@
+input {
+  background-color: transparent;
+  border: 2px solid var(--grayscale-container-line);
+  padding: 16px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &.error {
+    border: 2px solid var(--state-error)
+  }
+}

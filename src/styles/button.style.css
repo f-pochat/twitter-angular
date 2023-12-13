@@ -1,0 +1,22 @@
+button {
+  padding: 12px 4px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+
+  &.secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+
+    &:hover {
+      background-color: var(--grayscale-dark-hover);
+    }
+  }
+
+  &.primary {
+    &:hover {
+      background-color: var(--grayscale-hover);
+    }
+  }
+}

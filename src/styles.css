@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('styles/grayscale.style.css');
+@import url('styles/primary.style.css');
+@import url('styles/state.style.css');
+@import url('styles/text.style.css');
+@import url('styles/input.style.css');
+@import url('styles/button.style.css');
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  height: 100%;
+}
