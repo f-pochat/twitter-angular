@@ -3,6 +3,7 @@ import {LoginComponent} from "./features/auth/login/login.component";
 import {RegisterComponent} from "./features/auth/register/register.component";
 import {AppComponent} from "./app.component";
 import {AuthGuard} from "./shared/guards/auth.guard";
+import {HomeComponent} from "./features/home/home.component";
 
 export const routes: Routes = [{
   title: "Login",
@@ -17,7 +18,25 @@ export const routes: Routes = [{
   {
     title: "Home",
     path: "",
-    component: AppComponent,
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    title: "Explore",
+    path: "explore",
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    title: "Profile",
+    path: "profile",
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    title: "Messages",
+    path: "messages",
+    component: HomeComponent,
     canActivate: [AuthGuard]
   }
 ];

@@ -14,9 +14,18 @@ button {
     }
   }
 
-  &.primary {
+  &.white {
     &:hover {
       background-color: var(--grayscale-hover);
+    }
+  }
+
+  &.primary {
+    background-color: var(--primary-main);
+    color: white;
+
+    &:hover {
+      background-color: var(--primary-dark);
     }
   }
 }

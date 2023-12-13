@@ -2,7 +2,7 @@
   <div class="logo-container">
     <app-logo [height]=100 [width]=100 />
   </div>
-  <div class="h3">Welcome to Sirius Twitter</div>
+  <div class="h3">Welcome to Sirius Twitter!</div>
   <div class="h5">Enter your email, or &#64;username</div>
   <form [formGroup]="loginForm" (submit)="submitLogin()">
     <div>
@@ -19,7 +19,7 @@
     </div>
     <span
       *ngIf="loginForm.hasError('customError')">{{loginForm.getError('customError')}}</span>
-    <button type="submit" class="primary" [disabled]="loading">Sign In</button>
+    <button type="submit" class="white" [disabled]="loading">Sign In</button>
     <button type="button" class="secondary" routerLink="/register">Register</button>
   </form>
 </app-container>
