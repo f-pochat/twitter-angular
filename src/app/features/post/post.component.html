@@ -1,0 +1,15 @@
+<app-modal [isOpen]="isOpened()">
+  <div class="container">
+    <form [formGroup]="postForm">
+      <app-avatar name="Fede Pochat Hola"></app-avatar>
+      <textarea formControlName="postInput" placeholder="What is happening?!" rows="3">
+        </textarea>
+    </form>
+    <div class="footer">
+      <div>
+        <i class="fa-regular fa-image"></i>
+      </div>
+      <button class="primary">Post</button>
+    </div>
+  </div>
+</app-modal>

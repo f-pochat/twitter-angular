@@ -1,14 +1,24 @@
 <aside id="sidebar">
-    <nav>
-        <div class="container">
-            <app-logo [height]="32" [width]="32"></app-logo>
-            <ul>
-                <li *ngFor="let route of routes" [class.active]="href === route.path">
-                    <i class="fa {{route.icon}}"></i>
-                    <a class="h5" routerLink="{{route.path}}">{{route.title}}</a>
-                </li>
-            </ul>
-            <button class="primary">Post</button>
+  <nav>
+    <div class="container">
+      <div class="menu">
+        <app-logo [height]="32" [width]="32"></app-logo>
+        <ul>
+          <li *ngFor="let route of routes" [class.active]="href === route.path" routerLink="{{route.path}}">
+            <i class="fa {{route.icon}}"></i>
+            <a class="h5">{{route.title}}</a>
+          </li>
+        </ul>
+        <button class="primary" (click)="showPostModal()">Post</button>
+      </div>
+      <div class="profile">
+        <div>
+          <app-avatar name="Fede Pochat"></app-avatar>
+          {{"@fede_pochat"}}
         </div>
-    </nav>
+        <i class="fa fa-ellipsis-h"></i>
+      </div>
+    </div>
+  </nav>
+  <ng-content></ng-content>
 </aside>

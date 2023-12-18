@@ -1,0 +1,6 @@
+<div class="avatar">
+  <img *ngIf="imageUrl; else initialsTemplate" [ngSrc]="imageUrl" alt="User Avatar" [height]="40" [width]="40">
+  <ng-template #initialsTemplate>
+    <span class="initials">{{ getInitials() }}</span>
+  </ng-template>
+</div>

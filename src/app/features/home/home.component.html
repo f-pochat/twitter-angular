@@ -1,1 +1,27 @@
-<app-sidebar></app-sidebar>
+<app-sidebar>
+  <div class="home">
+    <div class="home-middle">
+      <div class="middle-top-container"></div>
+      <div class="middle-post">
+        <form [formGroup]="postForm">
+          <app-avatar name="Fede Pocha"></app-avatar>
+          <textarea formControlName="postInput" placeholder="What is happening?!" rows="3"
+                    (input)="adjustTextareaHeight($event)"></textarea>
+        </form>
+        <div class="footer">
+          <div>
+            <i class="fa-regular fa-image"></i>
+          </div>
+          <button class="primary">Post</button>
+        </div>
+      </div>
+      <div class="middle-tweet">
+
+      </div>
+    </div>
+    <div class="home-right">
+      L
+    </div>
+  </div>
+</app-sidebar>
+<app-post-modal></app-post-modal>

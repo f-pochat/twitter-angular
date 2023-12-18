@@ -1,69 +1,100 @@
 nav {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  border-right: 1px solid var(--grayscale-container-line);
+  height: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+
+  & .container {
     display: flex;
-    width: 30%;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-direction: column;
-    border-right: 2px solid var(--grayscale-container-line);
+    gap: 20px;
     height: 100%;
-    align-items: flex-end;
-    padding: 16px;
-    box-sizing: border-box;
 
-    & .container {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 20px;
+    & .menu > ul {
+      padding: 0;
+      gap: 32px;
+      display: flex;
+      flex-direction: column;
 
-        & ul {
-            padding: 0;
-            gap: 32px;
-            display: flex;
-            flex-direction: column;
-        }
+
+      & i {
+        font-size: 30px;
+      }
     }
+
+    & .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius: 32px;
+      cursor: pointer;
+
+      & div {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        & i {
+          font-size: 16px;
+        }
+      }
+
+      &:hover {
+        background-color: var(--grayscale-dark-hover);
+      }
+    }
+  }
 }
 
 #sidebar {
-    height: 100%;
-}
-
-i {
-    font-size: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 
-    & a {
-        text-decoration: none;
-        color: inherit;
-        font-weight: bold;
-    }
+  & a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
 
-    &.active {
-        color: var(--primary-main);
-        &:hover {
-            color: var(--primary-dark)
-        }
-
-        & a {
-            color: inherit;
-        }
-    }
+  &.active {
+    color: var(--primary-main);
 
     &:hover {
-        color: var(--grayscale-hover);
+      color: var(--primary-dark)
     }
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  &:hover {
+    color: var(--grayscale-hover);
+  }
 }
 
 button {
-    &.primary {
-        margin-top: 32px;
-        width: 230px;
-    }
+  &.primary {
+    margin-top: 32px;
+    width: 230px;
+  }
 }

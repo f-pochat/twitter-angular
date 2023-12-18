@@ -1,6 +1,6 @@
 input {
   background-color: transparent;
-  border: 2px solid var(--grayscale-container-line);
+  border: 1px solid var(--grayscale-container-line);
   padding: 16px 8px;
   border-radius: 4px;
   color: white;

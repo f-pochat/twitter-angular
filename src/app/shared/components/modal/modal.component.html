@@ -1,0 +1,7 @@
+<div class="background" *ngIf="isOpen" (click)="closeModal()"></div>
+<div role="dialog" class="modal" *ngIf="isOpen">
+  <div class="header" *ngIf="hasHeader">
+    <i class="fa fa-xmark" (click)="closeModal()"></i>
+  </div>
+  <ng-content></ng-content>
+</div>

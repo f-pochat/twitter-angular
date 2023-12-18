@@ -6,7 +6,7 @@ button {
 
   &.secondary {
     background-color: transparent;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
 
     &:hover {
